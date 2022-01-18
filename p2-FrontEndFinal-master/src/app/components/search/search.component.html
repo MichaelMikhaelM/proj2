@@ -1,0 +1,8 @@
+<div class="input-group rounded">
+    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" [(ngModel)]="inputString">
+</div>
+<section class="search-results">
+    <div *ngIf="inputString">
+     <app-search-list [username]="inputString" routerLink="feed"></app-search-list> 
+    </div>
+</section>

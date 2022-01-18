@@ -1,0 +1,17 @@
+#profile-picture{
+    border-radius: 50%;
+}
+
+nav{
+    box-shadow: 1px 1px 1px rgb(73, 71, 71);
+}
+
+h3 {
+    color: whitesmoke;
+    font-family: fantasy;
+    margin-top: 15%;
+}
+
+.search{
+    margin-top: 2%;
+}

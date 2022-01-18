@@ -1,0 +1,34 @@
+h1{
+    text-align: center;
+    padding: 60px 0;
+    background-color: #e8ecef;
+    font-size: 3.3rem;
+}
+
+.search-box{
+    display:block;
+    padding: 8px;
+}
+
+.search-container{
+    display: flex;
+    justify-content: center;
+}
+.search-results{
+    max-width: 600px;
+    width: 65%;
+    margin: 20px auto 0 auto;
+    /*
+    hr{
+        height: 1px;
+    }
+    */
+}
+.search-results hr{
+    height: 1px;
+    border: none;
+    background-color: lightgrey;
+}
+.search-results p{
+    margin: 10px 0;
+}

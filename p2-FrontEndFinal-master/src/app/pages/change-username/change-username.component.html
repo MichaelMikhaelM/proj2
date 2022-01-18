@@ -1,0 +1,18 @@
+<div id="forgot-password-container">
+    <h1 class="login-header">Change Username</h1>
+    <div id="fp-form-container">
+        
+        <form id="username-form">
+            
+            <div class="form-group">
+                <label for="new-username-input">New Username</label>
+                <input type="text"  class="user-input"  [(ngModel)]="newUsernameInput"  name="new-username-input">
+            </div>
+            <div class="submit-container">
+                <button type="submit" class="btn btn-primary" id="login-btn" (click)="changeUsername()">Change Username</button>
+            </div>
+        </form>
+    
+    </div>
+</div>
+

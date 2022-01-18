@@ -1,0 +1,7 @@
+<div *ngIf="userList" class="container">
+    <div class="user-list-container" *ngFor="let user of userList">
+        <hr class="dropdown-divider">
+        <div class="user-item" (click)="goToDetails($event)">{{user.userId}} {{user.username}}</div>
+    </div>
+
+</div>

@@ -1,0 +1,21 @@
+.user-item{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.user-item:hover{
+    background-color: gray;
+    color: rgb(121, 138, 196);
+}
+
+.user-list-container{
+    background-color: white;
+}
+
+.container{
+    background-color: white;
+    width: 250px;
+}

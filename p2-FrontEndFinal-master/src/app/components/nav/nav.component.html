@@ -1,0 +1,66 @@
+<nav class="navbar navbar-light" style="background-color: #378156b7;">
+  <div class="container-fluid">  
+    <div class="profile-picture-container">
+      <a *ngIf="session" class="nav-link active" aria-current="page" routerLink='/mainpage'>
+        <img *ngIf="profilePictureCheck" id="profile-picture" src={{img}} alt="" width="76" height="74">
+        <img *ngIf="!profilePictureCheck" id="profile-picture" src="../../../assets/img/default-profile-picture.png" alt="" width="76" height="74">
+      </a>
+      <a *ngIf="!session" class="nav-link active" aria-current="page" routerLink='/'>
+        <img id="profile-picture" src="../../../assets/img/temp-airee-logo.jpg" alt="" width="80" height="74">
+      </a>
+      </div>   
+
+      <div>
+        <h3>
+          Hello {{user.username}}
+        </h3>
+      </div>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul *ngIf="session" class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/mainpage">Home</a>
+        </li>
+        <li><hr class="dropdown-divider"></li>
+        <li>
+          <a class="nav-link active" aria-current="page" routerLink="/mypics">My Pics</a>
+        </li>
+        <li><hr class="dropdown-divider"></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/changePassword">Change Password</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <!-- <li><a class="dropdown-item" routerLink="/changeEmail">Change Email</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" routerLink="/changeFirst">Change Firstname</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" routerLink="/changeLast">Change Lastname</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" routerLink="/changeUsername">Change Username</a></li>
+              <li><hr class="dropdown-divider"></li>
+            <li><hr class="dropdown-divider"></li> -->
+            <li><a class="dropdown-item" (click)="logout()" style="color: rgb(170, 7, 7);">Logout</a></li>
+          </ul>
+        </li>
+        <li><hr class="dropdown-divider"></li>
+      </ul>
+      <ul *ngIf="!session" class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class= "nav-link active" routerLink="/register">Register Account</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <app-search></app-search>
+      </form>
+    </div>
+  </div>
+</nav>

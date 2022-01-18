@@ -1,0 +1,4 @@
+<button [disabled]="!selectedFiles" class="btn btn-primary" (click)="upload()">
+    Upload file
+</button>
+<input type="file" class="form-control-file" (change)="selectFile($event)">

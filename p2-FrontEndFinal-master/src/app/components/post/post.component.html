@@ -1,0 +1,47 @@
+<div *ngIf="posts">
+
+
+<nav aria-label="Posts">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" tabindex="-1"><<</a>
+    </li>
+    <li class="page-item"><a class="page-link" (click) = "turnPage(0)">1</a></li>
+    <li class="page-item"><a class="page-link" (click) = "turnPage(1)">2</a></li>
+    <li class="page-item"><a class="page-link" (click) = "turnPage(2)">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+    
+    <div class="post-container" *ngFor="let post of posts">
+        <div class="post-feed">
+            <span class="post-meta">
+                <img *ngIf="post.user.picture" id="profile-picture" src={{post.user.picture}} alt="" width="100" height="100">
+                <img *ngIf="!post.user.picture" id="profile-picture" src="../../../assets/img/default-profile-picture.png" alt="" width="100" height="100">
+
+                <div class="user-data">
+                    Posted by:
+                    <br>
+                    <a id="username" routerLink='/{{post.user.userId}}'>{{post.user.username}}</a>
+                    <br>
+                    Posted:
+                    <br>
+                    {{post.submitted}}
+                    <br>
+
+                    <br>
+
+                    <button *ngIf="post.user.userId == current_user.userId" type="button" class="btn btn-danger" id="delete-btn" (click) = "deletePost(post.postId)">Delete</button>
+                </div>
+
+            </span>
+
+            <div class="content-container">
+                <p *ngIf="post.content" id="content">{{post.content}}</p>
+                <img *ngIf="post.pictureLink" id="post-picture" src={{post.pictureLink}} alt="" width="260" height="260">
+            </div>
+        </div>
+    </div>
+</div>

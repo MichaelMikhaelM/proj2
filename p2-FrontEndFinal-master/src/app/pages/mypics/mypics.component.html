@@ -1,0 +1,16 @@
+<app-nav></app-nav>
+
+<div class="upload-container">
+    <app-upload-image></app-upload-image>
+</div>
+
+
+<div class="img-container" *ngFor="let pic of picList">
+    <div class="img-content">
+        <img id="pic" [src]="pic.pictureLink" width="320px" height="250px"/>
+    </div>
+    <div class="btn-container">
+        <button class="btn btn-primary" (click)="setAsProfilePic(pic.pictureId)">Set Profile Pic</button>
+        <button class="btn btn-danger" (click)="deletePicture(pic.pictureId)">Delete</button>
+    </div>
+</div>

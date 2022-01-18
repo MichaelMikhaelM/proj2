@@ -1,0 +1,32 @@
+.img-container
+{
+    display: flex;
+    justify-content: center;
+    margin: 14px;
+}
+
+
+#profile-picture{
+    border-radius: 1%;
+}
+
+.upload-container{
+    padding: 3em;
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    height: 4em;
+    width: 8em;
+    border-radius: 0%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 4px;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+}
